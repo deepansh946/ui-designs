@@ -85,6 +85,7 @@ h1 {
   height: 80vh;
   width: 100%;
   margin: 0;
+  position: relative;
 }
 
 .header-left {
@@ -101,6 +102,12 @@ h1 {
   align-items: center;
 }
 
+@media only screen and (max-width: 28.125em) {
+  .header-left {
+    width: 80%;
+  }
+}
+
 .header-heading {
   font-size: 4rem;
   font-weight: 400;
@@ -108,6 +115,44 @@ h1 {
   animation: animateLeft 1s ease-out;
   margin-left: 7rem;
   color: #fff;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header-heading {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 48.75em) {
+  .header-heading {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .header-heading {
+    margin-left: 3rem;
+  }
+}
+@media only screen and (max-width: 38.75em) {
+  .header-heading {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 34.375em) {
+  .header-heading {
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .heade-heading {
+    margin-left: 1rem;
+  }
+}
+@media only screen and (max-width: 19.375em) {
+  .header-heading {
+    font-size: 1.8rem;
+    margin-top: 12rem;
+  }
 }
 
 .header-heading-emphasis {
@@ -127,6 +172,12 @@ h1 {
   background-position: top;
 }
 
+@media only screen and (max-width: 38.75em) {
+  .header-right {
+    background-position: center;
+  }
+}
+
 .header-logo-box {
   top: 7rem;
   left: 7rem;
@@ -134,8 +185,42 @@ h1 {
   position: absolute;
 }
 
+@media only screen and (max-width: 43.75em) {
+  .header-logo-box {
+    left: 3rem;
+  }
+}
+@media only screen and (max-width: 38.75em) {
+  .header-logo-box {
+    left: 2rem;
+    top: 10rem;
+  }
+}
+@media only screen and (max-width: 34.375em) {
+  .header-logo-box {
+    top: 7rem;
+  }
+}
+@media only screen and (max-width: 28.125em) {
+  .header-logo-box {
+    top: 10rem;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .header-logo-box {
+    top: 12rem;
+    left: 1rem;
+  }
+}
+
 .header-logo {
-  top: 5rem;
+  height: 5rem;
+}
+
+@media only screen and (max-width: 38.75em) {
+  .header-logo {
+    height: 4em;
+  }
 }
 
 .header-navbar {
@@ -150,6 +235,29 @@ h1 {
   animation: animateRight 1.2s ease-in-out;
 }
 
+@media only screen and (max-width: 48.75em) {
+  .header-navbar {
+    top: 5rem;
+    right: 3rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .header-navbar {
+    right: 1rem;
+  }
+}
+@media only screen and (max-width: 38.75em) {
+  .header-navbar {
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+    width: 100%;
+  }
+}
+
 .header-navbar ul {
   list-style-type: none;
   text-align: center;
@@ -161,6 +269,13 @@ h1 {
   font-weight: bolder;
   margin: 1rem;
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 19.375em) {
+  .header__navbar li {
+    font-size: 1.3rem;
+    margin: 0.7rem;
+  }
 }
 
 .header-navbar a {
@@ -187,6 +302,13 @@ h1 {
   animation: animateBottom 1s ease-out;
 }
 
+@media only screen and (max-width: 38.75em) {
+  .header-button {
+    font-size: 1.7rem;
+    padding: 0.7rem 1.7rem;
+  }
+}
+
 .header-button:hover {
   transform: translateY(-0.8rem);
   box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.6);
@@ -195,14 +317,32 @@ h1 {
 .items {
   display: flex;
   padding: 5rem;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+@media only screen and (max-width: 38.75em) {
+  .items {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 5rem;
+  }
 }
 
 .item-box {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  flex-grow: 1;
+}
+@media only screen and (max-width: 38.75em) {
+  .item-box {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+  }
 }
 
 .item-icon {
@@ -228,5 +368,12 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+}
+
+@media only screen and (max-width: 38.75em) {
+  .items-description {
+    justify-content: center;
+    align-items: center;
+  }
 }
