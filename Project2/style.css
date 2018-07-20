@@ -1,0 +1,67 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif, serif;
+}
+
+.header {
+  background: url("./images/Background.jpg");
+}
+
+.button-class {
+  background-image: linear-gradient(
+    to left,
+    #fad961,
+    #fac047,
+    #faa631,
+    #f98a22,
+    #f76b1c
+  );
+  border: 1rem transparent
+    linear-gradient(to left, #fad961, #fac047, #faa631, #f98a22, #f76b1c);
+  border-radius: 2rem;
+  padding: 1rem;
+  color: #fff;
+  box-shadow: 0.3rem 0.3rem 0.5rem #888888;
+}
+
+.button-class:hover {
+  transform: translateY(-0.5rem);
+  transition: all 0.3s;
+}
+
+.card {
+  border-radius: 15rem;
+  box-shadow: 0 0 0.5rem #888888;
+  padding: 2rem 3rem;
+  margin: 2rem 2.5rem;
+}
+
+.card-heading {
+  font-size: 2rem;
+  text-align: center;
+}
+
+hr {
+  width: 3rem;
+  border-width: 5px 0 0;
+  border-color: #420093;
+}
+
+.card-testimonial {
+  margin: 1rem 0;
+}
+
+.quote {
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+.para {
+  margin-bottom: 1rem;
+}
+
+.card-client {
+}

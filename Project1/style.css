@@ -1,0 +1,379 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.5em 0;
+}
+
+@keyframes animateTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10em);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(1em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animateBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10em);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-1em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animateLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10em);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(1em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animateRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10em);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(1em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header {
+  height: 80vh;
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.header-left {
+  background-color: #db5461;
+  -webkit-clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+  height: 100%;
+  width: 60%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media only screen and (max-width: 28.125em) {
+  .header-left {
+    width: 80%;
+  }
+}
+
+.header-heading {
+  font-size: 4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  animation: animateLeft 1s ease-out;
+  margin-left: 7rem;
+  color: #fff;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header-heading {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 48.75em) {
+  .header-heading {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .header-heading {
+    margin-left: 3rem;
+  }
+}
+@media only screen and (max-width: 38.75em) {
+  .header-heading {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 34.375em) {
+  .header-heading {
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .heade-heading {
+    margin-left: 1rem;
+  }
+}
+@media only screen and (max-width: 19.375em) {
+  .header-heading {
+    font-size: 1.8rem;
+    margin-top: 12rem;
+  }
+}
+
+.header-heading-emphasis {
+  color: #30343f;
+  font-weight: bold;
+}
+
+.header-right {
+  height: 100%;
+  width: 50%;
+  background-image: url("./images/background_header.jpg");
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: top;
+}
+
+@media only screen and (max-width: 38.75em) {
+  .header-right {
+    background-position: center;
+  }
+}
+
+.header-logo-box {
+  top: 7rem;
+  left: 7rem;
+  animation: animateTop 1s ease-out;
+  position: absolute;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .header-logo-box {
+    left: 3rem;
+  }
+}
+@media only screen and (max-width: 38.75em) {
+  .header-logo-box {
+    left: 2rem;
+    top: 10rem;
+  }
+}
+@media only screen and (max-width: 34.375em) {
+  .header-logo-box {
+    top: 7rem;
+  }
+}
+@media only screen and (max-width: 28.125em) {
+  .header-logo-box {
+    top: 10rem;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .header-logo-box {
+    top: 12rem;
+    left: 1rem;
+  }
+}
+
+.header-logo {
+  height: 5rem;
+}
+
+@media only screen and (max-width: 38.75em) {
+  .header-logo {
+    height: 4em;
+  }
+}
+
+.header-navbar {
+  top: 7rem;
+  right: 5rem;
+  position: absolute;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5);
+  text-align: center;
+  background-color: #fff;
+  animation: animateRight 1.2s ease-in-out;
+}
+
+@media only screen and (max-width: 48.75em) {
+  .header-navbar {
+    top: 5rem;
+    right: 3rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .header-navbar {
+    right: 1rem;
+  }
+}
+@media only screen and (max-width: 38.75em) {
+  .header-navbar {
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+    width: 100%;
+  }
+}
+
+.header-navbar ul {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.header-navbar li {
+  font-weight: bolder;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 19.375em) {
+  .header__navbar li {
+    font-size: 1.3rem;
+    margin: 0.7rem;
+  }
+}
+
+.header-navbar a {
+  color: #30343f;
+}
+
+.header-navbar a:hover {
+  color: #db5461;
+}
+
+.header-button {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #30343f;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border: 4px solid #30343f;
+  border-radius: 25rem;
+  display: grid;
+  margin-top: 5rem;
+  box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  animation: animateBottom 1s ease-out;
+}
+
+@media only screen and (max-width: 38.75em) {
+  .header-button {
+    font-size: 1.7rem;
+    padding: 0.7rem 1.7rem;
+  }
+}
+
+.header-button:hover {
+  transform: translateY(-0.8rem);
+  box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.6);
+}
+
+.items {
+  display: flex;
+  padding: 5rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media only screen and (max-width: 38.75em) {
+  .items {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 5rem;
+  }
+}
+
+.item-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  flex-grow: 1;
+}
+@media only screen and (max-width: 38.75em) {
+  .item-box {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+  }
+}
+
+.item-icon {
+  height: 4rem;
+  margin: 2rem;
+}
+
+.item-heading {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.item-para {
+  font-size: 1.5rem;
+  color: #8d9096;
+}
+
+.information {
+  background-color: #30343f;
+}
+
+.item-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 38.75em) {
+  .item-description {
+    justify-content: center;
+    align-items: center;
+  }
+}
